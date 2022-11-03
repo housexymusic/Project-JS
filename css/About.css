@@ -1,0 +1,135 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kameron:wght@400;700&family=Mitr:wght@300;400;500;600;700&display=swap');
+
+
+/*
+=============== 
+Global Styles
+===============
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #aaa;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+
+/* Hover Menu  */
+.food-item {
+  min-height: 800px;
+}
+
+.menu {
+  background: #aaa;
+  height: 60px;
+  line-height: 60px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+
+.menu ul li a:hover {
+  padding: 0;
+  margin: 0;
+  color: rgb(31, 30, 30);
+}
+
+/* hover down */
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li ul {
+  flex-direction: column;
+  position: absolute;
+  left: -50%;
+  top: 100%;
+  width: 300px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: left;
+  transition: .5s;
+}
+
+@media screen and (max-width: 568px) {
+  .menu ul li ul {
+    left: -100%;
+    width: 200px;
+  }
+}
+
+.menu ul li ul li {
+  display: block;
+  margin-left: 0;
+}
+
+.menu ul li ul li p {
+  font-size: 18px;
+}
+
+.menu ul li ul li img {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* hover effect */
+.menu ul li ul {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.menu ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
